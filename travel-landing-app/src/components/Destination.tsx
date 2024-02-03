@@ -18,8 +18,8 @@ const CustomArrow: React.FC<CustomArrowProps> = ({ onClick, direction }) => {
     fontSize: "24px",
     cursor: "pointer",
     zIndex: 1,
-    color: "#e44325", // Change the color as needed
-    [direction]: "0", // Use the direction prop to set left/right
+    color: "#e44325",
+    [direction]: "0",
   };
 
   return (
@@ -77,6 +77,12 @@ const Destination = () => {
     },
     {
       imageUrl:
+        "https://tse4.mm.bing.net/th?id=OIP.Wsj28QfypUHW7o1AC2HA9gHaEo&pid=Api",
+      name: "Monywa",
+      duration: "15 Days Trip",
+    },
+    {
+      imageUrl:
         "https://i.pinimg.com/564x/a6/80/e2/a680e24051f5bc123973defeaaf8b2ad.jpg",
       name: "Yangon",
       duration: "15 Days Trip",
@@ -112,10 +118,8 @@ const Destination = () => {
   const handleLikeClick = (index: number) => {
     setLikedDestinations((prevLikedDestinations: any) => {
       if (prevLikedDestinations.includes(index)) {
-        // If already liked, remove from liked destinations
         return prevLikedDestinations.filter((i: any) => i !== index);
       } else {
-        // If not liked, add to liked destinations
         return [...prevLikedDestinations, index];
       }
     });
